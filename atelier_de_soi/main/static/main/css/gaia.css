@@ -190,7 +190,7 @@ a:hover {
 }
 
 .text-danger {
-  color: #e78b90 !important;
+  color: #73b7c3 !important;
 }
 
 .text-gold,
@@ -242,10 +242,10 @@ a:hover {
 }
 
 .separator-danger {
-  color: #e78b90;
+  color: #9bf0ff;
 }
 .separator-danger:before, .separator-danger:after {
-  border-color: #e78b90;
+  border-color: #73b7c3;
 }
 
 p.description {
@@ -354,7 +354,7 @@ body > .navbar-collapse a {
 }
 
 .avatar-danger {
-  border-color: #e78b90;
+  border-color: #C3F6FF;
 }
 
 *::selection {
@@ -574,8 +574,8 @@ a,
 
 .btn-danger,
 .navbar .navbar-nav > li > a.btn-danger {
-  border-color: #e78b90;
-  color: #e78b90;
+  border-color: #73b7c3;
+  color: #73b7c3;
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle,
 .navbar .navbar-nav > li > a.btn-danger:hover,
@@ -584,20 +584,20 @@ a,
 .navbar .navbar-nav > li > a.btn-danger.active, .open >
 .navbar .navbar-nav > li > a.btn-danger.dropdown-toggle {
   background-color: transparent;
-  color: #e47a80;
-  border-color: #e47a80;
+  color: #73b7c3;
+  border-color: #73b7c3;
 }
 .btn-danger:disabled, .btn-danger[disabled], .btn-danger.disabled,
 .navbar .navbar-nav > li > a.btn-danger:disabled,
 .navbar .navbar-nav > li > a.btn-danger[disabled],
 .navbar .navbar-nav > li > a.btn-danger.disabled {
   background-color: transparent;
-  border-color: #e78b90;
+  border-color: #73b7c3;
 }
 .btn-danger.btn-fill,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill {
   color: #FFFFFF;
-  background-color: #e78b90;
+  background-color: #73b7c3;
   opacity: 1;
   filter: alpha(opacity=100);
 }
@@ -607,7 +607,7 @@ a,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill:active,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill.active, .open >
 .navbar .navbar-nav > li > a.btn-danger.btn-fill.dropdown-toggle {
-  background-color: #e47a80;
+  background-color: #2a8b9c;
   color: #FFFFFF;
 }
 .btn-danger.btn-fill .caret,
@@ -1100,8 +1100,8 @@ a,
 .filter.filter-color-black:before {
   background: #333;
 }
-.filter.filter-color-gold:before {
-  background: #bd986c;
+.filter.filter-color-pastel:before {
+  background: #c3f6ff;
 }
 .filter.filter-color-green:before {
   background: #55bea4;
@@ -2325,8 +2325,8 @@ a,
 }
 
 .img-circle.img-profile {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
 }
 
 .description {

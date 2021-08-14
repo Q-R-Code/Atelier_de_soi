@@ -58,26 +58,27 @@
                 <li>
                     <a href="#">Accueil</a>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-share-alt"></i> Share
-                    </a>
-                    <ul class="dropdown-menu dropdown-danger">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
-                        </li>
-                    </ul>
+                <li>
+                    <a href="#">Actualité</a>
                 </li>
                 <li>
-                    <a href="http://www.creative-tim.com/product/gaia-bootstrap-template"
-                       class="btn btn-danger btn-fill">Free Download</a>
+                    <a href="#">Blog</a>
                 </li>
+                <li>
+                    <a href="#who">Qui sommes-nous?</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <p>Connexion</p>
+                        <ul class="dropdown-menu dropdown-danger">
+                        <li>
+                            <a href="#">Connexion</a>
+                        </li>
+                        <li>
+                            <a href="#">Inscription</a>
+                        </li>
+                        </ul>
+                    </a>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -133,7 +134,7 @@
             <div class="col-md-4">
                 <div class="info-icon">
                     <div class="icon text-danger">
-                        <i class="pe-7s-note2"></i>
+                        <i class="pe-7s-users"></i>
                     </div>
                     <h3>Texte </h3>
                     <p class="description">Texte Texte Texte Texte Texte Texte Texte Texte Texte </p>
@@ -154,8 +155,8 @@
 
 
 <div class="section section-our-team-freebie">
-    <div class="parallax filter filter-color-black">
-        <div class="image" style="background-image:url('{% static 'main/assets/img/header-2.jpeg' %}')">
+    <div class="parallax filter filter-color-pastel">
+        <div class="image" style="background-image:url('{% static 'main/assets/img/header-2.jpg' %}')">
         </div>
         <div class="container">
             <div class="content">
@@ -176,7 +177,7 @@
                                         <div class="content">
                                             <div class="avatar avatar-danger">
                                                 <img alt="..." class="img-circle"
-                                                     src="{% static 'main/assets/img/faces/face_1.jpg' %}"/>
+                                                     src="{% static 'main/assets/img/musical-note.png' %}"/>
                                             </div>
                                             <div class="description">
                                                 <h3 class="title">Hypnose</h3>
@@ -192,7 +193,7 @@
                                         <div class="content">
                                             <div class="avatar avatar-danger">
                                                 <img alt="..." class="img-circle"
-                                                     src="{% static 'main/assets/img/faces/face_1.jpg' %}"/>
+                                                     src="{% static 'main/assets/img/musical-note.png' %}"/>
                                             </div>
                                             <div class="description">
                                                 <h3 class="title">Hypnose</h3>
@@ -208,7 +209,7 @@
                                         <div class="content">
                                             <div class="avatar avatar-danger">
                                                 <img alt="..." class="img-circle"
-                                                     src="{% static 'main/assets/img/faces/face_1.jpg' %}"/>
+                                                     src="{% static 'main/assets/img/musical-note.png' %}"/>
                                             </div>
                                             <div class="description">
                                                 <h3 class="title">Hypnose</h3>
@@ -224,7 +225,7 @@
                                         <div class="content">
                                             <div class="avatar avatar-danger">
                                                 <img alt="..." class="img-circle"
-                                                     src="{% static 'main/assets/img/faces/face_1.jpg' %}"/>
+                                                     src="{% static 'main/assets/img/musical-note.png' %}"/>
                                             </div>
                                             <div class="description">
                                                 <h3 class="title">Hypnose</h3>
@@ -240,7 +241,7 @@
                                         <div class="content">
                                             <div class="avatar avatar-danger">
                                                 <img alt="..." class="img-circle"
-                                                     src="{% static 'main/assets/img/faces/face_1.jpg' %}"/>
+                                                     src="{% static 'main/assets/img/musical-note.png' %}"/>
                                             </div>
                                             <div class="description">
                                                 <h3 class="title">Hypnose</h3>
@@ -256,7 +257,7 @@
                                         <div class="content">
                                             <div class="avatar avatar-danger">
                                                 <img alt="..." class="img-circle"
-                                                     src="{% static 'main/assets/img/faces/face_1.jpg' %}"/>
+                                                     src="{% static 'main/assets/img/musical-note.png' %}"/>
                                             </div>
                                             <div class="description">
                                                 <h3 class="title">Hypnose</h3>
@@ -278,7 +279,7 @@
 </div>
 
 
-<div class="section section-our-clients-freebie">
+<div class="section section-our-clients-freebie" id="#Who">
     <div class="container">
         <div class="title-area">
             <h5 class="subtitle text-gray">Les professionnels</h5>
@@ -324,7 +325,7 @@
 <div class="section section-small section-get-started">
     <div class="parallax filter">
         <div class="image"
-             style="background-image: url('{% static 'main/assets/img/office-1.jpeg' %}')">
+             style="background-image: url('{% static 'main/assets/img/bg-sono.jpg' %}')">
         </div>
         <div class="container">
             <div class="title-area">
@@ -341,7 +342,7 @@
 </div>
 
 
-<footer class="footer footer-big footer-color-black" data-color="black">
+<footer class="footer footer-big footer-color-white" data-color="black">
     <div class="container">
         <div class="row">
             <div class="col-md-2 col-sm-3">
@@ -377,10 +378,12 @@
             </div>
         </div>
         <hr>
+        <div>Icons made by <a href="" title="prettycons">prettycons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div>Icônes conçues par <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a></div>
         <div class="copyright">
             ©
             <script> document.write(new Date().getFullYear()) </script>
-            Creative Tim, made with love
+            Quentin Ruffier
         </div>
     </div>
 </footer>
