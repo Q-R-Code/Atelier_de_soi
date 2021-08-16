@@ -22,12 +22,13 @@ from main import views
 urlpatterns = [
     url(r'^$', views.index, name='home'),
     url(r'^main/', include('main.urls', namespace='main')),
+    url(r'^blog/', include('blog.urls', namespace='blog')),
     url(r'^admin/', admin.site.urls),
 ]
 
-
 if settings.DEBUG:
     import debug_toolbar
+
     urlpatterns = [
-        url(r'^__debug__/', include(debug_toolbar.urls)),
-    ] + urlpatterns
+                      url(r'^__debug__/', include(debug_toolbar.urls)),
+                  ] + urlpatterns

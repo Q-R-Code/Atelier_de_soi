@@ -992,7 +992,7 @@ a,
 .section .parallax,
 .section .static-image {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   overflow: hidden;
   display: block;
   position: relative;
@@ -1098,7 +1098,7 @@ a,
   border-color: #FFFFFF;
 }
 .filter.filter-color-black:before {
-  background: #333;
+  background: #e4eced;
 }
 .filter.filter-color-pastel:before {
   background: #c3f6ff;
@@ -1107,7 +1107,7 @@ a,
   background: #55bea4;
 }
 .filter.filter-color-blue:before {
-  background: #008b9c;
+  background: #2a8b9c;
 }
 .filter.filter-color-purple:before {
   background: #50236F;
@@ -2759,7 +2759,7 @@ a,
   }
 
   .section-header {
-    padding: 0 !important;
+    padding: 10 !important;
   }
   .section-header .parallax, .section-header .static-image {
     height: 80vh;
