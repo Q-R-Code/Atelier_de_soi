@@ -78,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'atelier_de_soi',
-        'USER': 'flynz',
+        'USER': 'postgres',
         'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': '5432',
