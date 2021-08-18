@@ -518,7 +518,7 @@ a,
 .navbar .navbar-nav > li > a.btn.active, .open >
 .navbar .navbar-nav > li > a.btn.dropdown-toggle {
   background-color: transparent;
-  color: #777777;
+  color: #ffffff;
   border-color: #777777;
 }
 .btn:disabled, .btn[disabled], .btn.disabled,
@@ -997,6 +997,7 @@ a,
   display: block;
   position: relative;
 }
+
 .section .parallax > img,
 .section .parallax .filter > img,
 .section .static-image > img,
@@ -1009,7 +1010,10 @@ a,
   z-index: 1;
 }
 .section .parallax-small {
-  height: 65vh;
+  height: 40vh;
+}
+.section .parallax-big {
+  height: 120vh;
 }
 .section .responsive-background {
   position: relative;
