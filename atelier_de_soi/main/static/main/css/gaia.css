@@ -245,7 +245,7 @@ a:hover {
   color: #9bf0ff;
 }
 .separator-danger:before, .separator-danger:after {
-  border-color: #73b7c3;
+  border-color: #9bf0ff;
 }
 
 p.description {
@@ -1892,6 +1892,8 @@ a,
   -ms-transition: all 370ms cubic-bezier(0.34, 1.61, 0.7, 1);
   transition: all 370ms cubic-bezier(0.34, 1.61, 0.7, 1);
 }
+
+}
 .card:not(.card-plain):not(.card-price):hover {
   -webkit-transform: scale(1.03);
   -moz-transform: scale(1.03);
@@ -1945,6 +1947,7 @@ a,
 .card .description {
   font-size: 13px;
 }
+
 
 .card-member {
   display: block;

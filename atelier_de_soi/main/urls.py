@@ -1,11 +1,11 @@
-from django.conf.urls import url
-from django.urls import include
+from django.urls import path
 
 from . import views
 
 app_name = 'main'
 
 urlpatterns = [
-    url(r'^$', views.index, name='home'),
+    path(r'', views.index, name='home'),
+    path('mentions-legales', views.legal_notice, name='legal_notice'),
 
 ]

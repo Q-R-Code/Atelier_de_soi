@@ -27,13 +27,22 @@
                         <div class="content">
                             <article>
                                 <div class="title-area">
-                                    <h3 class="title-modern">{{ post.title }}</h3>
-                                    <h6>Publié par <i>{{ post.author_or_default }}</i> le {{ post.created_on|date:'j F
-                                        Y' }}
+                                    <h3 class="title-modern">
+                                        {% if post.published == False %}
+                                        NOT PUBLISH {{ post.title }}
+                                        {% else %}
+                                        {{ post.title }}
+                                        {% endif %}
+                                    </h3>
+                                    <h6>Publié par <i>{{ post.author_or_default }}</i>
+                                        le {{ post.created_on|date:'j F Y' }}
                                     </h6>
                                     <div class="separator line-separator">♦</div>
                                 </div>
                                 <h5>{{ post.content|safe|truncatewords:50 }}</h5>
+                                <div class="button-get-started">
+                                    <a href="{% url 'blog:post' slug=post.slug %}" class="btn btn-danger btn-fill btn-lg">Lire plus</a>
+                                </div>
                             </article>
                         </div>
                     </div>

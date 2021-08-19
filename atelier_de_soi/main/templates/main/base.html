@@ -72,14 +72,14 @@
                     <a href="{% url 'home' %}#LesProfessionnels">Qui sommes-nous?</a>
                 </li>
                 {% if user.is_authenticated %}
-                    {% if user.is_superuser or user.is_staff %}
-                        <li>
-                            <a style="color:black; font-size: 15px" href="/admin">Admin</a>
-                        </li>
-                    {% endif %}
-                    <li>
-                        <a href="/compte/connection/logout">Déconnexion</a>
-                    </li>
+                {% if user.is_superuser or user.is_staff %}
+                <li>
+                    <a style="color:black; font-size: 15px" href="/admin">Admin</a>
+                </li>
+                {% endif %}
+                <li>
+                    <a href="/compte/connection/logout">Déconnexion</a>
+                </li>
                 {% else %}
                 <li>
                     <a href="/compte/connection/login">Connection</a>
@@ -100,52 +100,13 @@
 
 
 <footer class="footer footer-big footer-color-white" data-color="black">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2 col-sm-3">
-
-            </div>
-            <div class="col-md-2 col-sm-3">
-
-            </div>
-            <div class="col-md-3 col-md-offset-1 col-sm-3">
-                <div class="info">
-
-                </div>
-            </div>
-
-            <div class="col-md-2 col-md-offset-1 col-sm-3">
-                <div class="info">
-                    <h5 class="title">Suivez nous sur :</h5>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="#" class="btn btn-social btn-facebook btn-simple">
-                                    <i class="fa fa-facebook-square"></i> Facebook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-social btn-twitter btn-simple">
-                                    <i class="fa fa-twitter"></i> Twitter
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
+    <div class="container text-center">
         <hr>
-        <div>Icons made by <a href="" title="prettycons">prettycons</a> from <a href="https://www.flaticon.com/"
-                                                                                title="Flaticon">www.flaticon.com</a>
-        </div>
-        <div>Icônes conçues par <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
-                href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a></div>
-        <div class="copyright">
-            ©
-            <script> document.write(new Date().getFullYear()) </script>
-            Quentin Ruffier
-        </div>
+        <a href="{% url 'main:legal_notice' %}">Mentions légales</a>
+        <script> document.write(new Date().getFullYear()) </script>
+        Quentin Ruffier - QR-R-Code - <a href="https://github.com/Q-R-Code">GitHub</a>
     </div>
+
 </footer>
 
 </body>
