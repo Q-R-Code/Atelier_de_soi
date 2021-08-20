@@ -21,4 +21,41 @@
         </article>
     </div>
 </div>
+<div class="section section-our-clients-freebie">
+    <div class="container">
+        <div class="col-md-8 card mb-4  mt-3 ">
+            <div class="card-body">
+                <!-- comments -->
+                <div class="title-area">
+                    <h4>{{ comments.count }} commentaires</h4>
+                </div>
+                {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                    <p class="font-weight-bold">
+                        {{ comment.author}}
+                        <span class=" text-muted font-weight-normal">
+              {{ comment.created_on }}
+            </span>
+                    </p>
+                    {{ comment.content | linebreaks }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-8 card mb-4  mt-3 ">
+            <div class="card-body">
+                <div class="title-area">
+                <h3>Laisser un commentaire :</h3>
+                </div>
+                <form method="post" style="">
+                    {{ comment_form.as_p }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-fill btn-lg">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
 {% endblock %}
