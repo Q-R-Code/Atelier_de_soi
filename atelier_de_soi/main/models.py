@@ -15,7 +15,7 @@ class NewsPost(models.Model):
     content = models.TextField(blank=True, verbose_name="Contenu")
 
     class Meta:
-        ordering = ['-created_on']
+        ordering = ['created_on']
         verbose_name = "Actualité"
 
     def __str__(self):

@@ -5,7 +5,8 @@ from .models import NewsPost
 
 
 def index(request):
-    news = NewsPost.objects.all().order_by('-created_on')
+    news_all = NewsPost.objects.filter(published=True)
+    news = news_all.order_by('-id')[:3]
     for new in news :
         print(new.title)
     return render(request, 'main/home.html', {"news":news})

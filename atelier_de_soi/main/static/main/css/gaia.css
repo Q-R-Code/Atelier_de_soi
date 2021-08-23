@@ -1949,6 +1949,24 @@ a,
 }
 
 
+.card-news {
+  width: 360px;
+  height: 300px;
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card-news .content {
+  padding: 10px;
+}
+.card-news > img {
+  background: none repeat scroll 0 0 transparent;
+  height: auto;
+  width: 120px;
+  margin: 0 auto;
+}
+
+
 .card-member {
   display: block;
   text-align: center;

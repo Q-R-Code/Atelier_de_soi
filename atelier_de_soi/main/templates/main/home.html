@@ -220,16 +220,14 @@
                 </div>
                 <div class="row">
                     {% for new in news %}
-                    <div class="col">
-                        <div class="card card-member">
+                    <div class="col-md-4">
+                        <div class="card card-news">
                             <div class="content">
-                                <div class="title-area">
-                                    <h4>{{new.title}}</h4>
-                                    <h6>Publié par <i>{{ new.author_or_default }}</i>
-                                        le {{ new.created_on|date:'j F Y' }}
-                                    </h6>
-                                    <div class="separator separator-danger">✻</div>
-                                </div>
+                                <h4>{{new.title}}</h4>
+                                <p class="description">Publié par <i>{{ new.author_or_default }}</i>
+                                    le {{ new.created_on|date:'j F Y' }}</p>
+                                <div class="separator separator-danger">✻</div>
+
                                 <p class="description">{{ new.content|safe|truncatewords:20 }}</p>
                                 <div class="button-get-started">
                                     <a href="{% url 'main:news' slug=new.slug %}">Lire
