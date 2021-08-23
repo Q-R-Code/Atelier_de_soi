@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+
+{% block content %}
+<div class="section section-header">
+    <div class="parallax-small filter filter-color-blue">
+        <div class="container">
+            <div class="content">
+                <div class="title-area">
+                    <h2 class="title-modern">{{ news.title }}</h2>
+                    <div class="separator line-separator">♦</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section section-our-clients-freebie">
+    <div class="container">
+        <article>
+            <div>{{ news.content|linebreaks|safe }}</div>
+        </article>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="card-white col">
+        <div class="content">
+            <div class="title-area">
+                <h4>{{news.title}}</h4>
+                <h6>Publié par <i>{{ news.author_or_default }}</i>
+                    le {{ news.created_on|date:'j F Y' }}
+                </h6>
+                <div class="separator separator-danger">✻</div>
+            </div>
+            <p class="description">{{ news.content|safe|truncatewords:30 }}</p>
+            <div class="button-get-started">
+                <a href="#" class="btn btn-danger btn-fill btn-lg">Lire
+                    plus</a>
+            </div>
+        </div>
+        <div class="card-white col">
+            <div class="content">
+                <div class="title-area">
+                    <h4>{{news.title}}</h4>
+                    <h6>Publié par <i>{{ news.author_or_default }}</i>
+                        le {{ news.created_on|date:'j F Y' }}
+                    </h6>
+                    <div class="separator separator-danger">✻</div>
+                </div>
+                <p class="description">{{ news.content|safe|truncatewords:30 }}</p>
+                <div class="button-get-started">
+                    <a href="#" class="btn btn-danger btn-fill btn-lg">Lire
+                        plus</a>
+                </div>
+            </div>
+            <div class="card-white col">
+                <div class="content">
+                    <div class="title-area">
+                        <h4>{{news.title}}</h4>
+                        <h6>Publié par <i>{{ news.author_or_default }}</i>
+                            le {{ news.created_on|date:'j F Y' }}
+                        </h6>
+                        <div class="separator separator-danger">✻</div>
+                    </div>
+                    <p class="description">{{ news.content|safe|truncatewords:30 }}</p>
+                    <div class="button-get-started">
+                        <a href="#" class="btn btn-danger btn-fill btn-lg">Lire
+                            plus</a>
+                    </div>
+                </div>

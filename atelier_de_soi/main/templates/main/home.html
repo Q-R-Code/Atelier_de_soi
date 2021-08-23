@@ -202,7 +202,7 @@
     </div>
 </div>
 
-<div class="section section-small section-get-started">
+<div class="section section-get-started">
     <div class="parallax">
         <div class="image"
              style="background-image: url('{% static 'main/assets/img/bg-news.jpg' %}')">
@@ -219,39 +219,32 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="card-white col">
-                        <div class="content">
-                            <div class="title-area">
-                                <h4>News 1</h4>
-                                <div class="separator separator-danger">✻</div>
+                    {% for new in news %}
+                    <div class="col">
+                        <div class="card card-member">
+                            <div class="content">
+                                <div class="title-area">
+                                    <h4>{{new.title}}</h4>
+                                    <h6>Publié par <i>{{ new.author_or_default }}</i>
+                                        le {{ new.created_on|date:'j F Y' }}
+                                    </h6>
+                                    <div class="separator separator-danger">✻</div>
+                                </div>
+                                <p class="description">{{ new.content|safe|truncatewords:20 }}</p>
+                                <div class="button-get-started">
+                                    <a href="{% url 'main:news' slug=new.slug %}">Lire
+                                        plus</a>
+                                </div>
                             </div>
-                            <p class="description">Info 1</p>
                         </div>
                     </div>
-                    <div class="card-white col">
-                        <div class="content">
-                            <div class="title-area">
-                                <h4>News 2</h4>
-                                <div class="separator separator-danger">✻</div>
-                            </div>
-                            <p class="description">Info 1</p>
-                        </div>
-                    </div>
-                    <div class="card-white col">
-                        <div class="content">
-                            <div class="title-area">
-                                <h4>News 3</h4>
-                                <div class="separator separator-danger">✻</div>
-                            </div>
-                            <p class="description">Info 1</p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
 </div>
-</div>
+
 <div class="section section-small section-get-started">
     <div class="parallax filter">
         <div class="image"
