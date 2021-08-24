@@ -1,20 +1,23 @@
 {% extends 'main/base.html' %}
+
 {% load static %}
 
 {% block content %}
-<header class="masthead">
-    <div class="container h-50">
-        <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-10 align-self-end">
-                <h2 class="text-uppercase text-white font-weight-bold">Oops ! I did it again.</h2>
-                <hr class="divider my-4"/>
-                <p>Une erreur s'est produite. Nous sommes actuellement en liaison directe avec Britney pour investiguer
-                    sur les causes du drame.</p>
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://www.youtube.com/embed/CduA0TULnow" frameborder="0" allowfullscreen></iframe>
+<div class="section section-header">
+    <div class="parallax-big filter filter-color-blue">
+        <div class="container">
+            <div class="content">
+                <div class="title-area">
+                    <h2 class="title-modern">Oops! Une erreur s'est produite! </h2>
+                    <div class="separator line-separator">♦</div>
+                    <h4>Nous sommes actuellement en liaison directe avec un ingénieur informaticien</h4>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/watch?v=rlarCLhzfoU" frameborder="0"
+                                allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</header>
+</div>
 {% endblock %}
