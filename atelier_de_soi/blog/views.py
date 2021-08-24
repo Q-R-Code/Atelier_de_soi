@@ -17,16 +17,6 @@ class BlogHome(ListView):
         return queryset.filter(published=True)
 
 
-class BlogPostCreate(CreateView):
-    model = BlogPost
-    template_name = 'blog/blogpost_create.html'
-    fields = ['title', 'content', ]
-
-
-class BlogPostDetail(DetailView):
-    model = BlogPost
-    context_object_name = "post"
-
 def post_detail(request, slug):
     template_name = 'blog/blogpost_detail.html'
     post = get_object_or_404(BlogPost, slug=slug)

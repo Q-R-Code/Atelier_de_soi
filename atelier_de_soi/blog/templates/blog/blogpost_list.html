@@ -41,7 +41,8 @@
                                 </div>
                                 <h5>{{ post.content|safe|truncatewords:50 }}</h5>
                                 <div class="button-get-started">
-                                    <a href="{% url 'blog:post' slug=post.slug %}" class="btn btn-danger btn-fill btn-lg">Lire plus</a>
+                                    <a href="{% url 'blog:post' slug=post.slug %}"
+                                       class="btn btn-danger btn-fill btn-lg" id="more-{{post.slug}}">Lire plus</a>
                                 </div>
                             </article>
                         </div>

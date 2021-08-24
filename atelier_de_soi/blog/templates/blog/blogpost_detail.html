@@ -45,13 +45,20 @@
         <div class="col-md-8 card mb-4  mt-3 ">
             <div class="card-body">
                 <div class="title-area">
-                <h3>Laisser un commentaire :</h3>
+                    <h3>Laisser un commentaire :</h3>
                 </div>
-                <form method="post" style="">
-                    {{ comment_form.as_p }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-danger btn-fill btn-lg">Envoyer</button>
-                </form>
+                {% if user.is_authenticated %}
+                    <form method="post" style="" id="content">
+                        {{ comment_form.as_p }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-fill btn-lg" id="send">Envoyer</button>
+                    </form>
+                {% else %}
+                    <div class="title-area">
+                        <h3>Vous devez être connecté afin de poster un commentaire.</h3><br>
+                        <p class="description"><a href="/compte/connection/login">Connection</a></p>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
