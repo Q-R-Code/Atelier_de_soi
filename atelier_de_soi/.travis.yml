@@ -14,7 +14,7 @@ before_script:
 env: DJANGO_SETTINGS_MODULE="atelier_de_soi_app.settings.travis"
 
 services:
-  - postgresql
+  - mysql
 
 
 script:
