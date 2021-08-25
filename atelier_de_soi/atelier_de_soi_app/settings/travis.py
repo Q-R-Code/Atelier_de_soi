@@ -1,3 +1,5 @@
+"""TravisCI settings """
+
 from . import *
 
 DATABASES = {
