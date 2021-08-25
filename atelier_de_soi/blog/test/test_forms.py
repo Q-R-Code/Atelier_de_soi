@@ -77,3 +77,4 @@ class Test_Functionnal_App_Blog(StaticLiveServerTestCase):
         new_count_comment = Comment.objects.count()
         self.assertEquals(new_count_comment, old_count_comment + 1)
 
+        self.driver.quit()

@@ -207,7 +207,7 @@
         <div class="image"
              style="background-image: url('{% static 'main/assets/img/bg-news.jpg' %}')">
         </div>
-        <div class="section" id="Actualité">
+        <div class="section" id="Actus">
             <div class="container">
                 <div class="row">
                     <div class="title-area">
@@ -230,7 +230,7 @@
 
                                 <p class="description">{{ new.content|safe|truncatewords:20 }}</p>
                                 <div class="button-get-started">
-                                    <a href="{% url 'main:news' slug=new.slug %}">Lire
+                                    <a href="{% url 'main:news' slug=new.slug %}" id="read-more-{{new.slug}}">Lire
                                         plus</a>
                                 </div>
                             </div>
