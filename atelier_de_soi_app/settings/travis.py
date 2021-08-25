@@ -4,9 +4,9 @@ from . import *
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': '',
-        'USER': 'travis',
+        'USER': 'postgres',
         'PASSWORD': '',
         'HOST': '',
         'PORT': '',
