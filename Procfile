@@ -1,1 +1,1 @@
-web: gunicorn atelier_de_soi_app.wsgi
+web: gunicorn -w 4 atelier_de_soi_app.wsgi
