@@ -10,11 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+
+import dj_database_url
 import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-#BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 if os.environ.get('ENV') == 'PRODUCTION':
@@ -77,7 +79,7 @@ WSGI_APPLICATION = 'atelier_de_soi_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 if os.environ.get('ENV') == 'PRODUCTION':
-    DATABASES = {os.environ.get('DATABASE_URL')}
+    DATABASES = {'default': dj_database_url.config()}
 else:
     DATABASES = {
         'default': {
@@ -141,4 +143,4 @@ LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 
 # Activate Django-Heroku.
-#django_heroku.settings(locals())
+# django_heroku.settings(locals())
