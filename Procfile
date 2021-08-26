@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath atelier_de_soi_app.wsgi
