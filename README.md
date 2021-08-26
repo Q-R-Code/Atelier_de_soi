@@ -86,7 +86,10 @@ L'application principale, elle s'occupe de :
 
 ## Tests ##
 
-Coverage :
+Coverage : coverage.py v5.5, created at 2021-08-26 15:14 +0200 - 95%
+
+    coverage run --omit='venv/*' --source='.' manage.py test
+    coverage html -d 'nom'
 
 ### Account ###
 
