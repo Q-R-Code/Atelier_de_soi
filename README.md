@@ -3,6 +3,7 @@
 <img alt="Django" src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"/>
 <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
 <img alt="MySQL" src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white">
+[![Build Status](https://app.travis-ci.com/Q-R-Code/Atelier_de_soi.svg?branch=main)](https://app.travis-ci.com/Q-R-Code/Atelier_de_soi)
 --------------------------------------------------------------
 
 # Atelier de Soi
