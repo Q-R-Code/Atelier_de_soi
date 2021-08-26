@@ -1,15 +1,19 @@
+"""the main functions of the Blog app"""
+
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, CreateView, DetailView
+from django.views.generic import ListView
 
 from .forms import CommentForm
 from .models import BlogPost
 
 
 class BlogHome(ListView):
+    """Return a list of article"""
     model = BlogPost
     context_object_name = "posts"
 
     def get_queryset(self):
+        """If its a staff or admin user, return all the articles, else return just published articles"""
         queryset = super().get_queryset()
         if self.request.user.is_superuser or self.request.user.is_staff:
             return queryset
@@ -18,6 +22,7 @@ class BlogHome(ListView):
 
 
 def post_detail(request, slug):
+    """allows the display of an article. initialize the comment system"""
     template_name = 'blog/blogpost_detail.html'
     post = get_object_or_404(BlogPost, slug=slug)
     comments = post.comments.filter()

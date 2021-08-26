@@ -1,9 +1,11 @@
+"""The tables for the News system"""
+
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.template.defaultfilters import slugify
 
-
 User = get_user_model()
+
 
 class NewsPost(models.Model):
     title = models.CharField(max_length=255, unique=True, verbose_name="Titre")
@@ -26,7 +28,6 @@ class NewsPost(models.Model):
             self.slug = slugify(self.title)
 
         super().save(*args, **kwargs)
-
 
     @property
     def author_or_default(self):

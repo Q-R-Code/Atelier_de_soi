@@ -8,31 +8,31 @@
 
 # Atelier de Soi
 
-Pour le projet final de la formation Développeur web Python de OpenClassRooms, j'ai choisi
-de réaliser une application type Blog/Actualité dans le thème de l'Hypnose, la musicothérapie etc.
+Pour le projet final de la formation Développeur web Python de OpenClassRooms, j'ai choisi de réaliser une application
+type Blog/Actualité dans le thème de l'Hypnose, la musicothérapie etc.
 
-Ce projet fait suite à une envie, de faire découvrir cet univers, peu connus, aux personnes de ma région
-par le biais d'une plateforme favorisant le partage et l'échange.
+Ce projet fait suite à une envie, de faire découvrir cet univers, peu connus, aux personnes de ma région par le biais
+d'une plateforme favorisant le partage et l'échange.
 
-Dans cette application développée grâce au framework Django vous avez : 
+Dans cette application développée grâce au framework Django vous avez :
 
-- Une page "accueil" pour, les spécialités, les acteurs (professionnels) qui vont 
-alimenter le site et les actualités avec des articles.
+- Une page "accueil" pour, les spécialités, les acteurs (professionnels) qui vont alimenter le site et les actualités
+  avec des articles.
 - Une section blog pour publier des articles
 - Un système de commentaires disponible sous chaque article pour échanger et discuter
-- Utilisation du système authentification de Django pour attribuer des groupes selon
-les acteurs.
+- Utilisation du système authentification de Django pour attribuer des groupes selon les acteurs.
 
 --------------------------------------------
+
 ## Utilisation ## 
 
-L'utilisation de cette application est libre de droit. 
+L'utilisation de cette application est libre de droit.
 
-Elle fournit une base modulable pour un site avec les fonctionnalités 
-décrites ci-dessous, elle peut donc être réutilisée pour un autre thème. 
+Elle fournit une base modulable pour un site avec les fonctionnalités décrites ci-dessous, elle peut donc être
+réutilisée pour un autre thème.
 
-Pour réaliser la mise en forme, j'ai utilisé le template suivant : Gaia Bootstrap Template
-disponible ici : https://www.creative-tim.com/product/gaia-bootstrap-template
+Pour réaliser la mise en forme, j'ai utilisé le template suivant : Gaia Bootstrap Template disponible
+ici : https://www.creative-tim.com/product/gaia-bootstrap-template
 
 
 --------------------------------------------
@@ -48,7 +48,6 @@ Pour paramétrer la base de données il faut modifier les réglages dans atelier
 Pour creer la base de données:
 
     python manage.py makemigrations && python manage.py migrate
-
 
 Pour démarrer l'application :
 
@@ -88,6 +87,10 @@ L'application principale, elle s'occupe de :
 
 Coverage :
 
+- Utilisation de django-selenium-login pour forcer les connections durant les tests. ( une page 404 est visible lors du
+démarrage des tests, c'est son comportement logique.)
+- Utilisation de TravisCI pour l'automatisation des tests.
+
 ### Account ###
 
 Des tests unitaires pour les vues : register et login.
@@ -96,7 +99,24 @@ Un test fonctionnel pour le parcours d'un utilisateur de la création de compte 
 
 ### Blog ###
 
+Un test fonctionnel pour le parcours d'un utilisateur connecté qui souhaite:
+
+- Cliquer sur le menu "Blog" pour afficher les articles
+- Cliquer sur le premier article
+- Ajouter un commentaire
+
+Un test d'intégration permet de vérifier le nombre de commentaires avant et apres l'ajout.
+Des tests d'intégration sont aussi présent pour vérifier les vues : BlogList et BlogDetail
+
+
 ### Main ###
+
+Un test fonctionnel pour le parcours d'un utilisateur connecté qui souhaite:
+
+- Voir les actualités grâce au menu "Actualité"
+- Cliquer sur la première actualité
+
+Des tests d'intégrations sur les vues : home et legal_notice
 
 --------------------------------------------
 

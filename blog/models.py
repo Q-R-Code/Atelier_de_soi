@@ -1,3 +1,9 @@
+"""Tables for the database
+BlogPost for the articles
+Comment for the comments under each articles
+
+"""
+
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.template.defaultfilters import slugify
@@ -23,6 +29,7 @@ class BlogPost(models.Model):
         return self.title
 
     def save(self, *args, **kwargs):
+        """Allows you to create a slug automatically if it is not notified"""
         if not self.slug:
             self.slug = slugify(self.title)
 
@@ -37,11 +44,10 @@ class BlogPost(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(BlogPost,on_delete=models.CASCADE,related_name='comments', verbose_name='Article')
+    post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='comments', verbose_name='Article')
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, verbose_name='Auteur')
     content = models.TextField(blank=True, verbose_name="Contenu")
     created_on = models.DateTimeField(auto_now_add=True, verbose_name="Publié")
-
 
     class Meta:
         ordering = ['created_on']

@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
-from django.contrib import messages
 from .forms import RegisterForm
 
 
-
 def register(request):
+    """the main function for the registration, if form is valid return the login page"""
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
@@ -14,5 +13,3 @@ def register(request):
         form = RegisterForm()
     context = {"form": form}
     return render(request, "account/register.html", context)
-
-
