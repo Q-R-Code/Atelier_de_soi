@@ -1,1 +1,1 @@
-web: gunicorn atelier_de_soi_app.wsgi
+web: gunicorn --pythonpath atelier_de_soi_app.wsgi
