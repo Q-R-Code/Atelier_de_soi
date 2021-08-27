@@ -125,4 +125,4 @@ Des tests d'intégrations sur les vues : home et legal_notice
 
 ## Version : ##
 
-- 1.0 : Premiere version stable de l'application. En ligne sur : 
+- 1.0 : Premiere version stable de l'application. En ligne sur : https://atelierdesoi.herokuapp.com
