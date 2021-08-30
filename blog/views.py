@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model, get_user
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, CreateView, DetailView
 
@@ -22,12 +23,13 @@ def post_detail(request, slug):
     post = get_object_or_404(BlogPost, slug=slug)
     comments = post.comments.filter()
     new_comment = None
-
+    user = get_user(request)
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             new_comment = comment_form.save(commit=False)
             new_comment.post = post
+            new_comment.author = user
             new_comment.save()
     else:
         comment_form = CommentForm()

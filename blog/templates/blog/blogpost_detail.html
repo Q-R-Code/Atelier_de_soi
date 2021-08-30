@@ -32,7 +32,7 @@
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        {{ comment.author}}
+                        {{ comment.author }}
                         <span class=" text-muted font-weight-normal">
               {{ comment.created_on }}
             </span>
@@ -48,16 +48,16 @@
                     <h3>Laisser un commentaire :</h3>
                 </div>
                 {% if user.is_authenticated %}
-                    <form method="post" style="" id="content">
-                        {{ comment_form.as_p }}
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-danger btn-fill btn-lg" id="send">Envoyer</button>
-                    </form>
+                <form method="post" style="" id="content">
+                    {{ comment_form.as_p }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-fill btn-lg" id="send">Envoyer</button>
+                </form>
                 {% else %}
-                    <div class="title-area">
-                        <h3>Vous devez être connecté afin de poster un commentaire.</h3><br>
-                        <p class="description"><a href="/compte/connection/login">Connection</a></p>
-                    </div>
+                <div class="title-area">
+                    <h3>Vous devez être connecté afin de poster un commentaire.</h3><br>
+                    <p class="description"><a href="/compte/connection/login">Connection</a></p>
+                </div>
                 {% endif %}
             </div>
         </div>
